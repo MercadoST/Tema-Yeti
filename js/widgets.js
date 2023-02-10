@@ -1,14 +1,26 @@
 // Widget de busqueda
 
-const formularioBuscar = document.querySelector('.sidebar-widget .wp-block-search__inside-wrapper');
+const widgetBuscar = document.querySelector('.sidebar-widget .wp-block-search__inside-wrapper');
 
-if (formularioBuscar) {
-    const inputFormulario = formularioBuscar.querySelector('input');
-    const submitFormulario = formularioBuscar.querySelector('button');
+if (widgetBuscar) {
+    const inputFormulario = widgetBuscar.querySelector('input');
+    const submitFormulario = widgetBuscar.querySelector('button');
 
     inputFormulario.className += ' form-control ';
     submitFormulario.className += ' btn btn-primary';
 }
+
+// Search form
+const formularioBuscar = document.querySelector('#searchform div');
+if (formularioBuscar) {
+    const textoBusqueda = formularioBuscar.querySelector('#s');
+    const botonBusqueda = formularioBuscar.querySelector('#searchsubmit');
+
+    formularioBuscar.className = 'd-flex'
+    textoBusqueda.className = 'form-control ';
+    botonBusqueda.className = 'btn btn-primary ms-2 px-5';
+}
+
 
 // Widget de categorias
 const listaWid = document.querySelector('.sidebar-widget ul');
